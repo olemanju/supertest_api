@@ -1,0 +1,20 @@
+{
+  "name": "supertest_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Manjunatha",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.21.0",
+    "chai": "^4.3.7",
+    "i": "^0.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
