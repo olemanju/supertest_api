@@ -1,21 +1,21 @@
-import supertest from "supertest";
+
+import request from "../config/common"
+
 import { expect } from "chai";
 import { describe } from "mocha";
-import qa from "../config/qa";
+import { faker } from '@faker-js/faker';
 
-const request = supertest(qa.baseurl)
+
 
 const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 
-let resourceId;
+describe.only("This suite will do all CRUD opearations and dynamically using aync", () => {
 
-describe("This suite will do all CRUD opearations and dynamically using aync", () => {
-
-    it("401 Post authentication Fail", async () => {
+    it.only("401 Post authentication Fail", async () => {
         const payload =
         {
             email: `test${Math.floor(Math.random() * 9999)}@gmail.com`,
-            name: "Rajini kanth",
+            name: faker.name.firstName(),
             gender: "male",
             status: "active"
         }
