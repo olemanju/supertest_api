@@ -3,15 +3,12 @@ import { expect } from "chai";
 import supertest from "supertest";
 import qa from "../config/qa";
 
-
 const request = supertest(qa.baseurl)
 
 const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 
 describe("First Get call ", () => {
-
     it("Get API Call First way", (done) => {
-
         request.get(`users?access-token=${TOKEN}`)
             .end((err, res) => {
                 //console.log(res.body)
@@ -19,12 +16,8 @@ describe("First Get call ", () => {
                 done()
             })
     })
-
-    it.skip("Get Api to featch the details of females and status is active in page 5 ", () => {
-
+    it("Get Api to featch the details of females and status is active in page 5 ", () => {
         const url = `users?access-token=${TOKEN}page=5&gender=female&status=active`
-
-
         request.get(url)
             .then((res) => {
                 var response = res.body.data
@@ -38,13 +31,11 @@ describe("First Get call ", () => {
                     // console.log(val.status)
                 });
             })
-
-
     })
-    it.skip("Get API Call last way way", async () => {
+
+    it("Get API Call last way way", async () => {
         //Standard method to call get
         request.get(`users?access-token=${TOKEN}`)
-        
             .then((res) => {
                 //Printing the status code
                 console.log(res.statusCode)
@@ -60,10 +51,6 @@ describe("First Get call ", () => {
                 console.log(res.body.meta.pagination.total)
                 //to know the total records
                 expect(res.body.meta.pagination.total).to.be.equal(2491)
-
             })
-
-
-
     })
 })

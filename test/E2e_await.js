@@ -73,13 +73,6 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
         //assertion
         expect(response.body.data.status).to.be.equal(payload.status)
         console.log("***********Put Call Ends******************")
-
-
-
-
-        //console.log(response.body)
-
-
     })
     it.only("Delete call", async () => {
 
@@ -88,13 +81,11 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
             name: `achintya - ${Math.floor(Math.random() * 9999)}`,
             status: "inactive"
         }
-
         var endpoint = `users/${resourceId}`
 
         const response = await request.delete(endpoint)
             .set("Authorization", `Bearer ${TOKEN}`)
             .expect(200)
-
 
         console.log("***********Delete Call starts******************")
         console.log(response.body)
@@ -103,8 +94,5 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
         //assertion
         expect(response.body.code).to.be.equal(204)
         console.log("***********Put Call Ends******************")
-
     })
-
-
 })

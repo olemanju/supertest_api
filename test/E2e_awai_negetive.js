@@ -10,9 +10,8 @@ require('dotenv').config()
 //const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 const TOKEN = process.env.USER_TOKEN
 
-
 describe("This suite will do all CRUD opearations and dynamically using aync", () => {
-
+    
     it("401 Post authentication Fail", async () => {
         const payload =
         {
@@ -40,7 +39,6 @@ describe("This suite will do all CRUD opearations and dynamically using aync", (
             name: "Rajini kanth",
             // not entered gender and status
         }
-
         var endpoint = 'users'
         const response = await request.post(endpoint)
             .set("Authorization", `Bearer ${TOKEN}`)
@@ -73,13 +71,7 @@ describe("This suite will do all CRUD opearations and dynamically using aync", (
             } else {
                 expect(element.message).to.eql("can't be blank")
             }
-
         }
         console.log("***********Post 422 Validation Call ends******************")
     })
-
-
-
-
-
 })

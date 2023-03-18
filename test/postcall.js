@@ -10,7 +10,6 @@ const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 describe("First Post call", () => {
 
     it("Post call", () => {
-
         const payload =
         {
             email: `test${Math.floor(Math.random() * 9999)}@gmail.com`,
@@ -33,7 +32,5 @@ describe("First Post call", () => {
                 expect(res.body.data.status).to.be.equal(payload.status)
             })
         //console.log(response.body)
-
-
     })
 })
