@@ -15,11 +15,15 @@ https://gorest.co.in/
 ### Running the tests
 To run all the tests execute the below command in the terminal,
 * <code>npm run test</code>
+### Reports
 To Generate Mochawesome Report all the tests 
 * <code>npm run report</code>
 
 ## Built With
-* Super test - Api test
+* Supertest - library
 * Mocha - Core Test Framework
 * Chai - Assertion Library
-* Allure - For Detailed reporting
+* faker - for Random data
+* Mochawesome - For Detailed reporting
+* Maintain confidential info like token using dotenv library
+* Mocha framework to organize tests
