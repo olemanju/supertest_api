@@ -10,7 +10,7 @@ require('dotenv').config()
 //const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 const TOKEN = process.env.USER_TOKEN
 
-describe("This suite will do all CRUD opearations and dynamically using aync", () => {
+describe("This suite will cover all the negetive flows", () => {
     
     it("401 Post authentication Fail", async () => {
         const payload =

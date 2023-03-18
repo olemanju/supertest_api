@@ -2,7 +2,6 @@ import { describe } from "mocha";
 import { expect } from "chai";
 import supertest from "supertest";
 import qa from "../config/qa";
-
 const request = supertest(qa.baseurl)
 
 const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
@@ -44,7 +43,6 @@ describe("First Get call ", () => {
                 //it will print the result in string
                 const GET_API_RESPONSE = JSON.stringify(res.body)
                 //console.log(GET_API_RESPONSE)
-
                 console.log(res.body.meta)
                 //To get the pagination details 
                 //{ pagination: { total: 2491, pages: 250, page: 1, limit: 10 } }

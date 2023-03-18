@@ -27,3 +27,6 @@ To Generate Mochawesome Report all the tests
 * Mochawesome - For Detailed reporting
 * Maintain confidential info like token using dotenv library
 * Mocha framework to organize tests
+
+## Sample Report:
+image.png

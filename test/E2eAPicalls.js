@@ -10,9 +10,9 @@ const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 
 let resourceId;
 
-describe("This suite will do all CRUD opearations and dynamically", () => {
+describe("This list opertaions are used in normal way", () => {
 
-    it("First insert the record in the system", () => {
+    it("created record using post call", () => {
         const payload =
         {
             email: `test${Math.floor(Math.random() * 9999)}@gmail.com`,
@@ -33,10 +33,8 @@ describe("This suite will do all CRUD opearations and dynamically", () => {
                 console.log(res.body.data.id)
             })
     })
-})
-    describe("lets try", () => {
+ 
         it("Get the details of the created record ", () => {
-
             //request.get(`users/${resourceId}?access-token=${TOKEN}`)
             request.get(`users/${resourceId}?access-token=${TOKEN}`)
                 .then((res) => {

@@ -9,9 +9,9 @@ const request = supertest(qa.baseurl)
 
 const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
 
-describe.only("This suite will do all CRUD opearations and dynamically using aync", () => {
+describe("This suite will do all CRUD opearations and dynamically using aync way", () => {
 
-    it.only("First insert the record in the system Post Call", async () => {
+    it("user has inserted new record using post call and using syanc and await ", async () => {
         const payload =
         {
             email: `test${Math.floor(Math.random() * 9999)}@gmail.com`,
@@ -34,11 +34,9 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
         // expect(response.body.resourceId)
     })
 
-
-    it.only("Get call using", async () => {
+    it("user has retirved the created record above and verified the details", async () => {
 
         var endpoint = `users/${resourceId}`
-
         const response = await request.get(endpoint)
             .set("Authorization", `Bearer ${TOKEN}`)
             .expect(200)
@@ -51,14 +49,12 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
         // expect(response.body.resourceId)
     })
 
-    it.only("put call", async () => {
-
+    it("user wants to modfiy the newly created record", async () => {
         const payload =
         {
             name: `achintya - ${Math.floor(Math.random() * 9999)}`,
             status: "inactive"
         }
-
         var endpoint = `users/${resourceId}`
 
         const response = await request.put(endpoint)
@@ -74,7 +70,7 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
         expect(response.body.data.status).to.be.equal(payload.status)
         console.log("***********Put Call Ends******************")
     })
-    it.only("Delete call", async () => {
+    it("user removed/deleted the newly created record", async () => {
 
         const payload =
         {
