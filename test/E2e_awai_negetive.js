@@ -4,19 +4,21 @@ import request from "../config/common"
 import { expect } from "chai";
 import { describe } from "mocha";
 import { faker } from '@faker-js/faker';
+//const faker = require('faker')
+require('dotenv').config()
+
+//const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
+const TOKEN = process.env.USER_TOKEN
 
 
+describe("This suite will do all CRUD opearations and dynamically using aync", () => {
 
-const TOKEN = "d4c89a22b28a3b6eab182636ab4e67f63798688668164eb241ad46c637b30f8f"
-
-describe.only("This suite will do all CRUD opearations and dynamically using aync", () => {
-
-    it.only("401 Post authentication Fail", async () => {
+    it("401 Post authentication Fail", async () => {
         const payload =
         {
             email: `test${Math.floor(Math.random() * 9999)}@gmail.com`,
             name: faker.name.firstName(),
-            gender: "male",
+            gender: faker.name.gender(),
             status: "active"
         }
 
@@ -58,12 +60,12 @@ describe.only("This suite will do all CRUD opearations and dynamically using ayn
     },
     { field: 'status', message: "can't be blank" }
   ]*/
-  //To validate we have 2 ways one is through index other is loop
-  expect(response.body.data[0].field).to.eq('gender')
-  expect(response.body.data[0].message).to.eq("can't be blank, can be male of female")
-  expect(response.body.data[1].field).to.eq('status')
-  expect(response.body.data[1].message).to.eq("can't be blank")
-  //2nd way
+        //To validate we have 2 ways one is through index other is loop
+        expect(response.body.data[0].field).to.eq('gender')
+        expect(response.body.data[0].message).to.eq("can't be blank, can be male of female")
+        expect(response.body.data[1].field).to.eq('status')
+        expect(response.body.data[1].message).to.eq("can't be blank")
+        //2nd way
         for (let i = 0; i < Error_data_array.length; i++) {
             const element = Error_data_array[i];
             if (element.field == 'gender') {
