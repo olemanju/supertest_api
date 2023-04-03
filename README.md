@@ -29,4 +29,5 @@ To Generate Mochawesome Report all the tests
 * Mocha framework to organize tests
 
 ## Sample Report:
-image.png
+Report:
+<img width="1440" alt="Screenshot 2023-03-18 at 2 59 47 pm" src="https://user-images.githubusercontent.com/13926516/226083866-0d20ddc4-c0d3-4391-a67f-1a5e2e6285df.png">
