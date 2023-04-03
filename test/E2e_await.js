@@ -21,9 +21,10 @@ describe("This suite will do all CRUD opearations and dynamically using aync way
         }
 
         var endpoint = 'users'
-        const response = await request.post(endpoint)
-            .set("Authorization", `Bearer ${TOKEN}`)
-            .send(payload)
+        const response = await request
+                            .post(endpoint)
+                            .set("Authorization", `Bearer ${TOKEN}`)
+                            .send(payload)
 
         console.log("***********Post Call starts******************")
         console.log(response.body)
@@ -38,8 +39,8 @@ describe("This suite will do all CRUD opearations and dynamically using aync way
 
         var endpoint = `users/${resourceId}`
         const response = await request.get(endpoint)
-            .set("Authorization", `Bearer ${TOKEN}`)
-            .expect(200)
+                        .set("Authorization", `Bearer ${TOKEN}`)
+                        .expect(200)
 
         console.log("***********Get Call starts******************")
         console.log(response.body)
@@ -58,9 +59,9 @@ describe("This suite will do all CRUD opearations and dynamically using aync way
         var endpoint = `users/${resourceId}`
 
         const response = await request.put(endpoint)
-            .set("Authorization", `Bearer ${TOKEN}`)
-            .send(payload)
-            .expect(200)
+                        .set("Authorization", `Bearer ${TOKEN}`)
+                        .send(payload)
+                        .expect(200)
 
         console.log("***********Put Call starts******************")
         console.log(response.body)
@@ -80,8 +81,8 @@ describe("This suite will do all CRUD opearations and dynamically using aync way
         var endpoint = `users/${resourceId}`
 
         const response = await request.delete(endpoint)
-            .set("Authorization", `Bearer ${TOKEN}`)
-            .expect(200)
+                        .set("Authorization", `Bearer ${TOKEN}`)
+                        .expect(200)
 
         console.log("***********Delete Call starts******************")
         console.log(response.body)

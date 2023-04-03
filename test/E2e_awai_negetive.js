@@ -23,7 +23,7 @@ describe("This suite will cover all the negetive flows", () => {
 
         var endpoint = 'users'
         const response = await request.post(endpoint)
-            .send(payload)
+                         .send(payload)
 
         console.log("***********Post 401 authentication Call starts******************")
         console.log(response.body)
@@ -41,8 +41,8 @@ describe("This suite will cover all the negetive flows", () => {
         }
         var endpoint = 'users'
         const response = await request.post(endpoint)
-            .set("Authorization", `Bearer ${TOKEN}`)
-            .send(payload)
+                         .set("Authorization", `Bearer ${TOKEN}`)
+                         .send(payload)
 
         console.log("***********Post 422 Validation Call starts******************")
         console.log(response.body)
