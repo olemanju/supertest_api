@@ -1,6 +1,7 @@
 # supertest_api
 
 ## Getting Started
+
 * Follow the Prerequisites section in this document
 * Open this project folder in Visual Studio Code
 * Install the dependencies with respect to this project by entering this in the terminal <code>npm install</code>
