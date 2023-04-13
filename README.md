@@ -1,4 +1,4 @@
-# supertest_api
+# SUPERTEST API
 
 ## Getting Started
 
